@@ -20,7 +20,6 @@ Tma
 Tma.sln
 ```
 
-
 ## Used libraries:
  - Argu (cli)
  - Expecto (test)
@@ -66,3 +65,7 @@ dotnet publish
 dotnet publish -r win-x64
 ```
 
+## Useful links
+
+- https://atlemann.github.io/fsharp/2018/02/28/fsharp-solutions-from-scratch.html
+- [expecto](https://github.com/haf/expecto#IDE-integrations)

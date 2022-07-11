@@ -5,13 +5,24 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "TmaConsole (console)",
+            "name": "Tma (console)",
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "Build: solution",
             "program": "${workspaceFolder}/src/TmaConsole/bin/Debug/net6.0/TmaConsole.dll",
             "args": [],
-            "cwd": "${workspaceFolder}/src/TmaConsole",
+            "cwd": "${workspaceFolder}",
+            "stopAtEntry": false,
+            "console": "internalConsole"
+        },
+        {
+            "name": "Tma (tests)",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "Build: solution",
+            "program": "${workspaceFolder}/tests/TmaTests/bin/Debug/net6.0/TmaTests.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}",
             "stopAtEntry": false,
             "console": "internalConsole"
         }
