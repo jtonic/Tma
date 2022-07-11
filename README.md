@@ -1,0 +1,68 @@
+# TMA F# Project
+
+## Project Structure
+
+```text
+Tma
+  src
+    TmaConsole
+      TmaConsole.fsharp
+      Program.fs
+    TmaPersistence
+      TmaPersistence.fsharp
+      Library.fs
+    TmaMessaging
+      TmaMessaging.fsharp
+      Library.fs
+  test
+    TmaTests.fsharp
+    TmaTests.fs
+Tma.sln
+```
+
+
+## Used libraries:
+ - Argu (cli)
+ - Expecto (test)
+
+## [Scaffold](./scaffold.md)
+
+## Build solution
+
+```shell
+dotnet build
+```
+
+## Run app
+
+```shell
+dotnet run --project src/TmaConsole/TmaConsole.fsproj
+```
+
+## Run tests
+
+```shell
+dotnet run --project tests/TmaTests/TmaTests.fsproj
+```
+
+## publish the executable
+
+- add the following in `src/TmaConsole/TmaConsole.fsproj` to create the executable with `dotnet build`
+
+```xml
+<RuntimeIdentifiers>osx-x64</RuntimeIdentifiers>
+<!-- or -->
+<RuntimeIdentifiers>linux-x64;win-x64;osx-x64</RuntimeIdentifiers>
+```
+-and create and run the executable (for the current platform)
+
+```shell
+dotnet publish
+./src/TmaConsole/bin/Debug/net6.0/TmaConsole
+```
+-- or targeting another platform
+
+```shell
+dotnet publish -r win-x64
+```
+
