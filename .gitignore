@@ -4,3 +4,6 @@
 **/obj/
 
 .fake
+
+# Miscs
+.tmp/

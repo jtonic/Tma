@@ -27,6 +27,7 @@ let main argv =
 ```
 
 ```shell
+dotnet new classlib -lang "F#" -o src/TmaSystem
 dotnet new classlib -lang "F#" -o src/TmaPersistence
 dotnet new classlib -lang "F#" -o src/TmaMessaging
 ```
@@ -53,6 +54,7 @@ let main argv =
 ```shell
 dotnet add src/TmaConsole/TmaConsole.fsproj reference src/TmaPersistence/TmaPersistence.fsproj
 dotnet add src/TmaConsole/TmaConsole.fsproj reference src/TmaMessaging/TmaMessaging.fsproj
+dotnet add src/TmaConsole/TmaConsole.fsproj reference src/TmaSystem/TmaSystem.fsproj
 ```
 
 ## Add external dependencies
@@ -69,5 +71,6 @@ dotnet new sln -n Tma
 dotnet sln add \
  src/TmaConsole/TmaConsole.fsproj \
  src/TmaMessaging/TmaMessaging.fsproj \
+ src/TmaSystem/TmaSystem.fsproj \
  tests/TmaTests/TmaTests.fsproj
 ```
