@@ -1,6 +1,6 @@
 open System
-open Messaging
 open Tma
+open FSharp.Collections
 
 [<EntryPoint>]
 let main _ =
@@ -13,11 +13,9 @@ let main _ =
 
     let rec loop () =
         "Press 'y' to close" |> Console.WriteLine
-
         if Console.ReadLine() = "y" then
             List.pair 1 2 |> printfn "Result : %A"
-    0
+            0
         else
             loop ()
-
     loop ()
