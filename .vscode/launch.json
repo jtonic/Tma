@@ -16,6 +16,17 @@
             "console": "internalConsole"
         },
         {
+            "name": "Tma (web)",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "Build: solution",
+            "program": "${workspaceFolder}/src/TmaWeb/bin/Debug/net6.0/TmaWeb.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            "stopAtEntry": false,
+            "console": "internalConsole"
+        },
+        {
             "name": "Tma (tests)",
             "type": "coreclr",
             "request": "launch",
