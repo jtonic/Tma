@@ -4,3 +4,9 @@
 **/obj/
 
 .fake
+
+# Miscs
+.tmp/
+**/*.csv
+**/*.zip
+**/*.crc

@@ -1,0 +1,4 @@
+[<AutoOpen>]
+module Me.System
+
+let inline ($) (f: 'a -> 'b) (a: 'a) : 'b = f a
