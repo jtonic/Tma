@@ -1,0 +1,20 @@
+#!markdown
+
+### Data Science Example
+
+#!fsharp
+
+#r "nuget:Microsoft.Spark"
+
+#!fsharp
+
+open Microsoft.Spark.Sql
+let sparkSession =
+    SparkSession
+        .Builder()
+        .AppName("on-dotnet-fsharp")
+        .GetOrCreate()
+
+#!fsharp
+
+Console.WriteLine("Hello F# Notebook")

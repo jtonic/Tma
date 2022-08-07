@@ -7,3 +7,6 @@
 
 # Miscs
 .tmp/
+**/*.csv
+**/*.zip
+**/*.crc
