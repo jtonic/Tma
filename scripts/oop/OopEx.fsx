@@ -2,14 +2,15 @@
     Simple Person class
 *)
 
-type Person(name: string, age: int) as self =
+type Person(name: string, age: int) =
 
     do printfn $"Name: {name}, age: {age}"
-
     let _name = name
     let _age = age
 
-    new() = Person("Tony", 52)
+
+    new() as this = Person(name = "Tony", age = Person.ProduceAge())
+                            then printfn "Calling the non args constructore %A" this.Name
 
     member val Name = name
     member val Age = age with get, set
@@ -19,6 +20,10 @@ type Person(name: string, age: int) as self =
     member self.printAge() = printfn $"age: {self.Age}"
 
     member self.printAll = self.printName >> self.printAge
+
+    static member private ProduceAge () =
+        System.Random() |> fun r -> r.Next 100
+
 
 let irina = Person("Irina Stan", 31)
 let jtonic = Person()
