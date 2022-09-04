@@ -75,3 +75,8 @@ module Array =
             | Some d -> Some (h, d)
             | None -> None)
 
+module SetExercises =
+    let novelWords = Set ["The";"the";"quick";"brown";"Fox";"fox"]
+    novelWords
+        |> Set.map (fun w -> w.ToLowerInvariant())
+
