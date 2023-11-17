@@ -32,3 +32,8 @@
   [1; 2; 3;]
     |> List.map ((+) 1)
   ```
+
+## Pattern match, Destructuring, Active patterns
+
+  example - TBD
+
