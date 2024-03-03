@@ -1,5 +1,8 @@
 ﻿namespace TmaMessaging
 
-module Say =
-    let hello name =
+type Say =
+
+    static member alwaysTwo = 2
+
+    static member hello name =
         printfn "Hello %s" name

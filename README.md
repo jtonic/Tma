@@ -38,6 +38,12 @@ dotnet build
 dotnet run --project src/TmaConsole/TmaConsole.fsproj
 ```
 
+## Run the application in watch mode
+
+```shell
+dotnet watch run --project src/CSharpConsole
+```
+
 ## Run tests
 
 ```shell

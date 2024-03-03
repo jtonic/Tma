@@ -5,7 +5,7 @@
   mkdir -p test
 ```
 
-## Create projects
+## Create F# projects
 
 - src
 
@@ -40,6 +40,7 @@ touch tests/TmaTests/TmaTests.fs
 ```
 
 Edit tests/TmaTests/TmaTests.fs
+
 ```fsharp
 open Expecto
 
@@ -73,4 +74,22 @@ dotnet sln add \
  src/TmaMessaging/TmaMessaging.fsproj \
  src/TmaSystem/TmaSystem.fsproj \
  tests/TmaTests/TmaTests.fsproj
+```
+
+## Create a C# project
+
+```shell
+dotnet new console -n CSharpConsole -o src/CSharpConsole
+```
+
+## Add C# project to the lsn
+
+```shell
+dotnet sln add src/CSharpConsole/CSharpConsole.csproj
+```
+
+## Run the C# project
+
+```shell
+dotnet run --project src/CSharpConsole
 ```
