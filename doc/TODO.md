@@ -1,11 +1,14 @@
 # Learn topics
 
-1. [ ] Read content of a file
-2. [ ] Data Holders
+1. [ ] Automated (unit) tests
+   1. [x] Simple
+   2. [ ] Refer the Main Project in Tests 
+2. [ ] Read content of a file
+3. [ ] Data Holders
    1. Normal class with fields
    2. record
    3. struct
-3. [ ] try catch with when in catch
-4. [ ] simple algorithms with LINQ
-5. [ ] O(n) for different type of collections in C#
-6. [ ] AutoClosable
+4. [ ] try catch with when in catch
+5. [ ] simple algorithms with LINQ
+6. [ ] O(n) for different type of collections in C#
+7. [ ] AutoClosable

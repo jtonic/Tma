@@ -9,6 +9,8 @@
 
 **/bin/
 **/obj/
+**/packages/
+**/*.sln.*.user
 
 .fake
 
