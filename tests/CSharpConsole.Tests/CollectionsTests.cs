@@ -44,4 +44,38 @@ public class CollectionsTests : IAsyncLifetime
         Console.WriteLine();
         Assert.NotEmpty(result);
     }
+    
+    [Fact]
+    public void CalculateSumTest()
+    {
+        var numbers = new List<int> {1, 2, 3, 4, 5};
+        var sum = numbers.Aggregate(0, (acc, i) => acc + i);
+        Assert.Equal(15, sum);
+    }
+
+    [Fact]
+    public void GroupByAgeTest()
+    {
+        var persons = new List<Person>
+        {
+            new("Ligia", 6),
+            new("Natty", 4),
+            new("Tony", 54),
+            new("Irina", 34),
+            new("Roxane", 38),
+            new("Liviu", 42),
+            new("Bruce Willis", 66),
+            new("Tom Hanks", 65)
+        };
+        var groupedPersons = persons
+            .GroupBy(p => p.Age)
+            .ToDictionary(g => g.Key, g => g.ToList())
+            .Values.ToList();
+        
+        groupedPersons.ForEach(ps =>
+            ps.ForEach(p => Console.Out.WriteLine($"{p.Name} - {p.Age}"))
+            );
+    }
+    
+    private record struct Person(string Name, int Age);  
 }
