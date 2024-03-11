@@ -33,13 +33,26 @@ public static class Program
     };
     return result;
   }
-  
+
   private static Dictionary<string, List<int>> ProcessNames(IList<string> names)
   {
     return names
-      .Select(n => n.Length)
-      .Where(n => n >= 3)
-      .GroupBy(n => n > 5 ? "Greater than 5" : "lower than 5")
-      .ToDictionary(g => g.Key, g => g.ToList());
+      .Select(GetNameLength)
+      .Where(IsGreaterOrEqualThan3)
+      .GroupBy(GetNameForLength)
+      .ToDictionary(GroupingExtensions.GetKey, GroupingExtensions.GetValues);
   }
+
+  private static int GetNameLength(string name)
+  {
+    return name.Length;
+  }
+  private static bool IsGreaterOrEqualThan3(int n) => n > 3;
+  private static string GetNameForLength(int n) => n > 5 ? "Greater than 5" : "lower than 5";
+}
+
+public static class GroupingExtensions
+{
+  public static TKey GetKey<TKey, TElement>(this IGrouping<TKey, TElement> group) => group.Key;
+  public static List<TElement> GetValues<TKey, TElement>(this IGrouping<TKey, TElement> group) => group.ToList();
 }
