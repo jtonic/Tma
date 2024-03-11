@@ -4,7 +4,7 @@
    1. [x] Simple
    2. [ ] Refer the Main Project in Tests
 2. [ ] Collections
-   1. [ ] Array
+   1. [x] Array
    2. [ ] List
    3. [ ] Dictionary
    4. [ ] HashSet
