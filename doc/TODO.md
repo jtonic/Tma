@@ -47,3 +47,13 @@
 11. [ ] O(n) for different type of collections in C#
 12. [ ] AutoClosable
 13. [ ] Extension methods
+
+
+
+- https://jobs.careers.microsoft.com/global/en/job/1676319/Software-Engineering-IC4
+
+   - Good system design, algorithmic skills, good knowledge of data structures
+   - General database knowledge
+   - Good understanding of distributed systems
+   - Engineering expertise in developing and owning Kubernetes applications
+   - Monitoring and observability
