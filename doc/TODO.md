@@ -2,25 +2,25 @@
 
 1. [ ] Automated (unit) tests
    1. [x] Simple
-   2. [ ] Refer the Main Project in Tests
+   2. [x] Refer to a library in scr main code
 2. [ ] Collections
    1. [x] Array
    2. [ ] List
    3. [ ] Dictionary
    4. [ ] HashSet
-   5. [ ] Stack
-   6. [ ] Queue
-   7. [ ] LinkedList
-   8. [ ] SortedList
-   9. [ ] SortedDictionary
-   10. [ ] SortedSet
-   11. [ ] BitArray
-   12. [ ] NameValueCollection
-   13. [ ] Hashtable
-   14. [ ] ReadOnlyCollection
-   15. [ ] ReadOnlyDictionary
-   16. [ ] Tuple
-   17. [ ] Ranges
+   5. [ ] Tuple
+   6. [ ] Ranges
+   7. [ ] Stack
+   8. [ ] Queue
+   9. [ ] LinkedList
+   10. [ ] SortedList
+   11. [ ] SortedDictionary
+   12. [ ] SortedSet
+   13. [ ] BitArray
+   14. [ ] NameValueCollection
+   15. [ ] Hashtable
+   16. [ ] ReadOnlyCollection
+   17. [ ] ReadOnlyDictionary
 3. [ ] IO
    1. [ ] Read from a file
    2. [ ] Write to a file
