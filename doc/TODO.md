@@ -1,6 +1,6 @@
 # Learn topics
 
-1. [ ] Automated (unit) tests
+1. [x] Automated (xUnit) tests
    1. [x] Simple
    2. [x] Refer to a library in scr main code
 2. [ ] Collections
@@ -21,18 +21,29 @@
    15. [ ] Hashtable
    16. [ ] ReadOnlyCollection
    17. [ ] ReadOnlyDictionary
-3. [ ] IO
-   1. [ ] Read from a file
-   2. [ ] Write to a file
-4. [ ] Data Holders
+3. [x] IO (System.IO)
+   1. [x] Read from a file
+   2. [x] Write to a file
+4. [ ] OOP
+   1. [ ] Classes (static, abstract, sealed, partial, nested, etc.
+   2. [ ] Interfaces
+   3. [ ] Enums
+   4. [ ] Delegates
+5. [ ] Data Holders
    1. [ ] Normal class with fields
    2. [ ] Record
    3. [ ] Struct
    4. [ ] Record struct
-5. [ ] Data transformation with LINQ
+6. [ ] Asynchronous programming
+   1. [ ] Building blocks
+   2. [ ] Simple example
+7. [ ] FP (CSharpFunctionalExtensions)
+   1. [ ] building blocks 
+8. [ ] Data transformation with LINQ
    1. [ ] Simple example on collections
    2. [ ] ...
-6. [ ] Try-Catch with when in catch
-7. [ ] Simple algorithms with LINQ
-8. [ ] O(n) for different type of collections in C#
-9. [ ] AutoClosable
+9. [ ] Try-Catch with when in catch
+10. [ ] Simple algorithms with LINQ
+11. [ ] O(n) for different type of collections in C#
+12. [ ] AutoClosable
+13. [ ] Extension methods
