@@ -22,23 +22,25 @@ var app = builder.Build();
 app.AddCommand("run", (
     [Option(Description = "App Name")] string appName,
     IRun run
-    ) => run.Run());
+    ) => run.Run(appName));
 app.AddCommand("greet", (
     [Option(Description = "The First Name")] string firstName,
     [Option(Description = "The Last Name")] string? lastName,
     Greet greet
-    ) => greet.Run());
+    ) => greet.Run(firstName, lastName));
 app.Run();
 
 internal interface IRun
 {
-    void Run();
+    void Run(string appName);
 }
 
 internal class AppRun : IRun
 {
-    public void Run()
+    public void Run(string appName)
     {
+        Console.WriteLine($"Running {appName}");
+        
         // integrated with F# library
         Say.hello("Tony");
         int a = Say.alwaysTwo;
@@ -86,9 +88,9 @@ internal class AppRun : IRun
 
 internal class Greet
 {
-    public void Run()
+    public void Run(string firstName, string? lastName)
     {
-        Console.WriteLine("Hello from Greet");
+        Console.WriteLine($"Greeting {firstName} {lastName ?? "Unknown"}");
     }
 }
 
