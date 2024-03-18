@@ -6,6 +6,7 @@ using TmaMessaging;
 
 var builder = CoconaApp.CreateBuilder();
 builder.Services.AddSingleton<IRun, AppRun>();
+builder.Services.AddSingleton<IUserInfoRetriever, UserInfoRetriever>();
 builder.Services.AddSingleton<Greet>();
 var app = builder.Build();
 
@@ -28,6 +29,8 @@ app.AddCommand("greet", (
     [Option(Description = "The Last Name")] string? lastName,
     Greet greet
     ) => greet.Run(firstName, lastName));
+
+app.AddCommands<CliCommands>();
 app.Run();
 
 internal interface IRun
