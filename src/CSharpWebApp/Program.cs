@@ -19,8 +19,6 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-app.MapGet("/weatherforecast", (IWeatherService weatherService) => weatherService.GetForecast())
-    .WithName("GetWeatherForecast")
-    .WithOpenApi();
+Routes.MapWeatherForecastRoutes(app);
 
 app.Run();
