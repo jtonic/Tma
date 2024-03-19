@@ -2,11 +2,10 @@ using CSharpWebApp;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
-builder.Services.AddSingleton<IWeatherService, WeatherService>();
+builder.Services
+    .AddEndpointsApiExplorer()
+    .AddSwaggerGen()
+    .AddSingleton<IWeatherService, WeatherService>();
 
 var app = builder.Build();
 
@@ -19,6 +18,7 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-Routes.MapWeatherForecastRoutes(app);
+// Add the routes to the app
+app.AddWeatherForecastRoutes();
 
 app.Run();
