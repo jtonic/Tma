@@ -1,0 +1,17 @@
+CREATE SCHEMA Bookstore;
+
+-- use schema
+SET search_path TO Bookstore;
+
+CREATE TABLE IF NOT EXISTS Authors
+(
+    Id BIGSERIAL NOT NULL PRIMARY KEY,
+    Name VARCHAR(100) NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS  Books
+(
+    Id BIGSERIAL NOT NULL PRIMARY KEY,
+    Title VARCHAR(100) NOT NULL,
+    AuthorId INTEGER REFERENCES Authors(Id)
+);
