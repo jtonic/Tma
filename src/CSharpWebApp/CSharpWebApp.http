@@ -1,6 +1,10 @@
 @CSharpWebApp_HostAddress = http://localhost:5108
 
+### GET /weatherforecast
 GET {{CSharpWebApp_HostAddress}}/weatherforecast/
 Accept: application/json
 
-###
+### GET /bookstore/authors
+GET {{CSharpWebApp_HostAddress}}/bookstore/authors/
+Accept: application/json
+

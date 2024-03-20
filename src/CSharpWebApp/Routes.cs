@@ -8,4 +8,10 @@ public static class Routes
             .WithName("GetWeatherForecast")
             .WithOpenApi();
     }
+    public static void AddBookstoreRoutes(this IEndpointRouteBuilder app)
+    {
+        app.MapGet("/bookstore/authors", (IBookstoreService service) => service.GetAuthorsAsync())
+            .WithName("GetBookstoreAuthors")
+            .WithOpenApi();
+    }
 }
