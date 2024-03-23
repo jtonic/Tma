@@ -1,0 +1,7 @@
+@HostPort = http://{{host}}:{{port}}
+
+### GET /weatherforecast
+GET {{HostPort}}/weatherforecast/
+Accept: application/json
+
+

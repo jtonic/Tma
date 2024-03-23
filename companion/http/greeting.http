@@ -1,0 +1,9 @@
+@HostPort = http://{{host}}:{{port}}
+
+### POST /greeting
+POST {{HostPort}}/greeting/
+Content-Type: application/json
+
+{
+  "Name": "Antonel-Ernest Pazargic"
+}

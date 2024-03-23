@@ -1,0 +1,14 @@
+@HostPort = http://{{host}}:{{port}}
+
+### GET /bookstore/authors
+GET {{HostPort}}/bookstore/authors/
+Accept: application/json
+
+### POST /bookstore/authors
+POST {{HostPort}}/bookstore/authors/
+Content-Type: application/json
+Accept: application/json
+
+{
+  "Name": "Antonel-Ernest Pazargic"
+}
