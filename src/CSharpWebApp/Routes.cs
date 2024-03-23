@@ -1,3 +1,5 @@
+using CSharpWebApp.Services;
+
 namespace CSharpWebApp;
 
 public static class Routes
@@ -12,6 +14,17 @@ public static class Routes
     {
         app.MapGet("/bookstore/authors", (IBookstoreService service) => service.GetAuthorsAsync())
             .WithName("GetBookstoreAuthors")
+            .WithOpenApi();
+        
+        app.MapPost("/bookstore/authors", (IBookstoreService service, Author author) => service.AddAuthorAsync(author))
+            .WithName("AddBookstoreAuthor")
+            .WithOpenApi();
+    }
+
+    public static void AddGreetingRoutes(this IEndpointRouteBuilder app)
+    {
+        app.MapPost("/greeting", (GreetingService service, Author author) => service.Greeting(author))
+            .WithName("GreetingAuthor")
             .WithOpenApi();
     }
 }

@@ -1,4 +1,5 @@
 using CSharpWebApp;
+using CSharpWebApp.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -7,7 +8,9 @@ builder.Services
     .AddSwaggerGen()
     .AddSingleton<IWeatherService, WeatherService>()
     .AddSingleton<IBookstoreRepository, BookstoreRepository>()
-    .AddSingleton<IBookstoreService, BookstoreService>();
+    .AddSingleton<IBookstoreService, BookstoreService>()
+    .AddSingleton<GreetingService>()
+    ;
 
 var app = builder.Build();
 
@@ -23,5 +26,6 @@ app.UseHttpsRedirection();
 // Add the routes to the app
 app.AddWeatherForecastRoutes();
 app.AddBookstoreRoutes();
+app.AddGreetingRoutes();
 
 app.Run();

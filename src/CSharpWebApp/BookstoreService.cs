@@ -13,9 +13,16 @@ public class BookstoreService: IBookstoreService
     {
         return await _bookstoreRepository.GetAuthorsAsync();
     }
+
+    public async Task<Author> AddAuthorAsync(Author author)
+    {
+        return await _bookstoreRepository.AddAuthorAsync(author);
+    }
 }
 
 public interface IBookstoreService
 {
     Task<List<Author>> GetAuthorsAsync();
+    
+    Task<Author> AddAuthorAsync(Author author);
 }

@@ -17,27 +17,20 @@ public class BookstoreRepository : IBookstoreRepository
 
     public async Task<List<Author>> GetAuthorsAsync()
     {
-        const string sql = "SELECT * FROM bookstore.Authors";
+        const string sql = "SELECT * FROM bookstore.authors";
         var authors = _connection.QueryAsync<Author>(sql);
         return (await authors).ToList();
+    }
+
+    public async Task<Author> AddAuthorAsync(Author author)
+    {
+        const string sql = "INSERT INTO  bookstore.authors (name) VALUES (@Name) RETURNING *";
+        return await _connection.QuerySingleAsync<Author>(sql, author);
     }
 }
 
 public interface IBookstoreRepository
 {
     Task<List<Author>> GetAuthorsAsync();
-}
-
-public class Author
-{
-    public int Id { get; set; }
-    public string Name { get; set; }
-    public List<Book> Books { get; set; }
-}
-
-public class Book
-{
-    public int Id { get; set; }
-    public string Title { get; set; }
-    public int AuthorId { get; set; }
+    Task<Author> AddAuthorAsync(Author author);
 }
