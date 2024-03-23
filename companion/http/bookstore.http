@@ -1,4 +1,4 @@
-@HostPort = http://{{host}}:{{port}}
+@HostPort = {{protocol}}://{{host}}:{{port}}
 
 ### GET /bookstore/authors
 GET {{HostPort}}/bookstore/authors/

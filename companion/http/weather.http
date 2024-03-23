@@ -1,4 +1,4 @@
-@HostPort = http://{{host}}:{{port}}
+@HostPort = {{protocol}}://{{host}}:{{port}}
 
 ### GET /weatherforecast
 GET {{HostPort}}/weatherforecast/
