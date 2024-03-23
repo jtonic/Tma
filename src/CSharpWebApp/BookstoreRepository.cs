@@ -1,14 +1,19 @@
-namespace CSharpWebApp;
-
+using CSharpWebApp.Exceptions;
 using Dapper;
 using Npgsql;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+
+namespace CSharpWebApp;
 
 public class BookstoreRepository : IBookstoreRepository
 {
-    private readonly NpgsqlConnection _connection = new("Host=localhost;Username=postgres;Password=admin;Database=postgres");
+    
+    private readonly NpgsqlConnection _connection;
+
+    public BookstoreRepository(IConfiguration configuration)
+    {
+        string connectionString = configuration.GetConnectionString("BookstoreDatabase") ?? throw new ConfigurationKeyNotFoundException("BookstoreDatabase");
+        _connection = new(connectionString);
+    }
 
     public async Task<List<Author>> GetAuthorsAsync()
     {
