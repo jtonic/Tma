@@ -1,4 +1,5 @@
 using Xunit;
+using static System.Console;
 
 namespace CSharpConsole.Tests;
 
@@ -17,7 +18,7 @@ public class CollectionsTests : IAsyncLifetime
     {
         return Task.CompletedTask;
     }
-    
+
     [Fact]
     public void ArrayTest()
     {
@@ -40,11 +41,11 @@ public class CollectionsTests : IAsyncLifetime
                 .SelectMany(name => name.ToCharArray())
                 .Where(char.IsUpper)
                 .ToList();
-        result.ForEach(Console.Write);
-        Console.WriteLine();
+        result.ForEach(Write);
+        WriteLine();
         Assert.NotEmpty(result);
     }
-    
+
     [Fact]
     public void CalculateSumTest()
     {
@@ -71,11 +72,11 @@ public class CollectionsTests : IAsyncLifetime
             .GroupBy(p => p.Age)
             .ToDictionary(g => g.Key, g => g.ToList())
             .Values.ToList();
-        
+
         groupedPersons.ForEach(ps =>
             ps.ForEach(p => Console.Out.WriteLine($"{p.Name} - {p.Age}"))
             );
     }
-    
-    private record struct Person(string Name, int Age);  
+
+    private record struct Person(string Name, int Age);
 }

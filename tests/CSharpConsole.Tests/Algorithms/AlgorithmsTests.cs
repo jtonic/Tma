@@ -26,7 +26,7 @@ public class AlgorithmsTests
                 i++;
             }
             while (i != n);
-            
+
             var result = sum / n;
             Console.WriteLine($"Arithmetic mean = {result}");
         }
@@ -35,9 +35,10 @@ public class AlgorithmsTests
     [Fact]
     public void TestFactorial()
     {
-        int Factorial(int n, int acc = 1) => 
-            n == 0 ? acc : Factorial(n - 1, acc * n);
-        
         Assert.Equal(6, Factorial(3));
+        return;
+
+        int Factorial(int n, int acc = 1) =>
+            n == 0 ? acc : Factorial(n - 1, acc * n);
     }
 }
