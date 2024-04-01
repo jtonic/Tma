@@ -2,7 +2,7 @@ open System
 
 let printOption opt =
     match opt with
-        | Some a -> printfn "Value: %A" a
+        | Some a -> printfn $"Value: %A{a}"
         | None -> Console.WriteLine "None"
 
 let op1 = Some 10
@@ -34,10 +34,10 @@ type Shape =
     interface IPrintable with
         member this.Print () =
             match this with
-                | Circle radius -> printfn "Circle: R=%A" radius
-                | Square l -> printfn "Square: l=%A" l
-                | Rectangle (l, w) -> printfn "Rectangle: L=%A, W=%A" l w
-                | Triangle(b, h) -> printfn "Triangle: B=%A, H=%A" b h
+                | Circle radius -> printfn $"Circle: R=%A{radius}"
+                | Square l -> printfn $"Square: l=%A{l}"
+                | Rectangle (l, w) -> printfn $"Rectangle: L=%A{l}, W=%A{w}"
+                | Triangle(b, h) -> printfn $"Triangle: B=%A{b}, H=%A{h}"
 
 
 let printShape shape =
