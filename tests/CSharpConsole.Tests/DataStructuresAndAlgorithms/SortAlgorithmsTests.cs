@@ -38,4 +38,33 @@ public class SortAlgorithmsTests
             }
         }
     }
+
+    [Fact]
+    public void TestInsertionSort()
+    {
+        // Given
+        int[] input = [-11, 12, -42, 0, 1, 90, 68, 6, -9];
+        
+        // When
+        InsertionSort(input);
+        
+        // Then
+        var joinedResult = String.Join(" | " , input);
+        Assert.Equal("-42 | -11 | -9 | 0 | 1 | 6 | 12 | 68 | 90", joinedResult);
+        
+        return;
+
+        void InsertionSort(int[] ints)
+        {
+            for (int i = 1; i < ints.Length; i++)
+            {
+                int j = i;
+                while (j > 0 && ints[j] < ints[j - 1])
+                {
+                    (ints[j], ints[j - 1]) = (ints[j - 1], ints[j]);
+                    j--;
+                }
+            }
+        }
+    }
 }
