@@ -67,4 +67,47 @@ public class SortAlgorithmsTests
             }
         }
     }
+
+
+    [Fact]
+    public void TestMergeSort()
+    {
+        // Given
+        int[] input = [-11, 12, -42, 0, 90, -9];
+        
+        // When
+        MergeSort(input);
+        
+        // Then
+        var joinedResult = String.Join(" | " , input);
+        Assert.Equal("-42 | -11 | -9 | 0 | 12 | 90", joinedResult);
+        
+        return;
+
+        void MergeSort(int[] a)
+        {
+            if (a.Length <= 1) { return; }
+            int m = a.Length / 2;
+            int[] left = GetSubarray(a, 0, m - 1);
+            int[] right = GetSubarray(a, m, a.Length - 1);
+            MergeSort(left);
+            MergeSort(right);
+            int i = 0, j = 0, k = 0;
+            while (i < left.Length && j < right.Length)
+            {
+                if (left[i] <= right[j]) { a[k] = left[i++]; }
+                else { a[k] = right[j++]; }
+                k++;
+            }
+            while (i < left.Length) { a[k++] = left[i++]; }
+            while (j < right.Length) { a[k++] = right[j++]; }           
+        }
+        
+        int[] GetSubarray(int[] a, int si, int ei)
+        {
+            int[] result = new int[ei - si + 1];
+            Array.Copy(a, si, result, 0, ei - si + 1);
+            return result;
+        }
+    }
 }
