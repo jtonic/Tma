@@ -42,10 +42,10 @@ type Shape =
 
 let printShape shape =
     match shape with
-    | Shape.Circle radius -> printfn "Circle: R=%A" radius
-    | Shape.Square l -> printfn "Square: l=%A" l
-    | Shape.Rectangle (l, w) -> printfn "Rectangle: L=%A, W=%A" l w
-    | Shape.Triangle(b, h) -> printfn "Triangle: B=%A, H=%A" b h
+    | Shape.Circle radius -> printfn $"Circle: R=%A{radius}"
+    | Shape.Square l -> printfn $"Square: l=%A{l}"
+    | Shape.Rectangle (l, w) -> printfn $"Rectangle: L=%A{l}, W=%A{w}"
+    | Shape.Triangle(b, h) -> printfn $"Triangle: B=%A{b}, H=%A{h}"
 
 let area shape =
     match shape with
