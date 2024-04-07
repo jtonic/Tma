@@ -2,9 +2,9 @@
 
 
 
--  CLR - Common Language Runtime
+- CLR - Common Language Runtime
 
--  CTS  Common Type System ()
+- CTS  Common Type System ()
 
 - IL - Intermediary Language
 
@@ -22,3 +22,4 @@
 
 - `non-LTS (.NET 5)` - 1 1/2 years support
 
+- TPL - Task Parallel Library
