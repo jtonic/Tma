@@ -66,18 +66,18 @@ let app =
     let callCenter = { Counter = 0
                        Calls = Queue() }
     let consultant = Consultant "Tony"
+    
+    let rec operate callCenter =
+        if areWaitingCalls callCenter then
+            callCenter |> answerCall consultant |> endCall
+            operate callCenter
+        else
+            callCenter
+            
     callCenter
         |> call 1234 consultant
         |> call 5678 consultant
         |> call 1468 consultant
         |> call 9641 consultant
+        |> operate
         |> ignore
-    
-    
-    let rec loop callCenter =
-        if areWaitingCalls callCenter then
-            callCenter |> answerCall consultant |> endCall; loop callCenter
-        else
-            callCenter
-            
-    loop callCenter |> ignore
