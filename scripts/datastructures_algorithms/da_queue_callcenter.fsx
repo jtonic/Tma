@@ -1,5 +1,6 @@
 open System
 open System.Collections.Generic
+open System.Threading.Tasks
 // ----------------- 1.1 -----------------
 // model definition
 // ---------------------------------------
@@ -51,21 +52,22 @@ let app =
     let callCenter = { Counter = 0; Calls = Queue() }
     let consultant = Consultant "Tony"
     
-    let rec processCalls callCenter: Async<CallCenter> = async {
+    let rec processCalls callCenter = task {
         if areWaitingCalls callCenter then
             let rand = Random()
-            do! Async.Sleep (rand.Next (500, 1000))
+            do! Task.Delay (rand.Next (500, 1000))
             callCenter |> answerCall consultant |> endCall
             return! processCalls callCenter
         else
             return callCenter
         }
     
-    callCenter
-        |> call 1234 consultant
-        |> call 5678 consultant
-        |> call 1468 consultant
-        |> call 9641 consultant
-        |> processCalls
-        |> Async.RunSynchronously
-        |> ignore
+    let processedCalls =
+        callCenter
+                |> call 1234 consultant
+                |> call 5678 consultant
+                |> call 1468 consultant
+                |> call 9641 consultant
+                |> processCalls
+    printfn $"{processedCalls.Result.Counter} calls processed!!!."
+    
