@@ -62,12 +62,14 @@ let app =
             return callCenter
         }
     
-    let processedCalls =
+    let numberOfProcessedCalls =
         callCenter
                 |> call 1234 consultant
                 |> call 5678 consultant
                 |> call 1468 consultant
                 |> call 9641 consultant
                 |> processCalls
-    printfn $"{processedCalls.Result.Counter} calls processed!!!."
+                |> _.Result  // block to wait the task to finish
+                |> _.Counter
+    printfn $"{numberOfProcessedCalls} calls processed!!!."
     
