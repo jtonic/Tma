@@ -1,19 +1,29 @@
 module TreesData
 
-type Tree<'T> =
-    | Node of 'T * Tree<'T> * Tree<'T>
+type TreeNode<'T> =
+    {
+        Value: 'T
+        Left: Tree<'T>
+        Right: Tree<'T>
+    }
+
+and Tree<'T> =
+    | Node of TreeNode<'T>
     | Leaf of 'T
 
 // initialize a tree with integers
-let tree = Node(1,
-                Node(2,
-                     Leaf(3),
-                     Leaf(4)),
-                Node(5,
-                     Leaf(6),
-                     Node(7,
-                        Leaf(8),
-                        Leaf(9)
-                     )
-                )
-            )
+
+let tree =
+    Node {
+        Value = 1
+        Left = Node {
+            Value = 2
+            Left = Leaf 3
+            Right = Leaf 4
+        }
+        Right = Node {
+            Value = 5
+            Left = Leaf 6
+            Right = Leaf 7
+        }
+    }

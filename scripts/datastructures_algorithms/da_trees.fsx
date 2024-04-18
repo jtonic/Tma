@@ -10,7 +10,9 @@ let treeToString indent tree : string =
     let rec nestedTreeToString (indent: string) tree : string =
         let newIndent = indent + initialIndent
         match tree with
-        | Node(value, left, right) ->
+        | Node { Value = value
+                 Left = left
+                 Right = right } ->
             $"{indent}{value}\n" +
             nestedTreeToString newIndent left +
             nestedTreeToString newIndent right
@@ -28,17 +30,22 @@ module Traverse =
     // --------------------------------------------------------------
     let rec preOrderTraverse (tree: 'T Tree) : 'T list =
         match tree with
-        | Node(value, left, right) ->
-            [value] @ preOrderTraverse left @ preOrderTraverse right
-        | Leaf(value) ->
-            [value]
+        | Node { Value = value
+                 Left = left
+                 Right = right } ->
+            [ value ]
+            @ preOrderTraverse left @ preOrderTraverse right
+        | Leaf (value) -> [ value ]
+
             
     // --------------------------------------------------------------§
     // 2. traverse the tree in-order and add nodes to a list
     // --------------------------------------------------------------
     let rec inOrderTraverse tree =
         match tree with
-        | Node(value, left, right) ->
+        | Node { Value = value
+                 Left = left
+                 Right = right } ->
             inOrderTraverse left @ [value] @ inOrderTraverse right
         | Leaf(value) ->
             [value]
@@ -48,7 +55,10 @@ module Traverse =
     // --------------------------------------------------------------
     let rec postOrderTraverse tree = 
         match tree with
-        | Node (value, left, right) -> postOrderTraverse left @ postOrderTraverse right @ [value] 
+        | Node { Value = value
+                 Left = left
+                 Right = right } ->
+            postOrderTraverse left @ postOrderTraverse right @ [value] 
         | Leaf value -> [value]
 
 open Traverse
