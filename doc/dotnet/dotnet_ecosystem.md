@@ -21,9 +21,10 @@
 
 #### Community
   - BenchmarkDotNet
+  - FsToolkit.ErrorHandling
+  - `Cocona` (CLI)
   - `Dapper`
   - CSharpFunctionalExtensions (FP)
-  - `Cocona` (CLI)
   - NodaTime
   - FluentValidation
   - FluentAssertions

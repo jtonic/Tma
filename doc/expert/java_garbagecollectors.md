@@ -53,7 +53,7 @@ JMM is divided into several areas:
   Each JVM thread has a PC Register, which contains the address of the currently executed instruction.
   If the method being executed is not native, the PC register contains the address of the JVM instruction currently being executed. `Garbage collectors do not interact with this area.`
 
-## Heap memory areas (generations)
+### Heap memory areas (generations)
 
 The Java heap memory is divided into different generations, or memory pools, to optimize garbage collection.
 
@@ -77,6 +77,17 @@ The Java heap memory is divided into different generations, or memory pools, to 
 
 4. `Metaspace` - Introduced in Java 8, this is where class metadata is stored.
   It is not part of the heap, but it is still managed by the garbage collector.
+
+### Memory Leak
+
+Root causes of memory leaks in Java:
+1. Memory leak by static references
+2. Memory leak by listener references
+3. Memory leak by unclosed resources
+4. Memory leak by unclosed files
+5. Memory leak by unclosed connections
+
+Tools: `VisualVM`, `JConsole`, and `YourKit`, Eclipse Memory Analyzer (MAT).
 
 ## Object reference types
 
