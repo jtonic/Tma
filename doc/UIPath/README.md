@@ -1,5 +1,9 @@
 # Interview Companion
 
+## My resume
+
+- [My resume](0.my_resume_explained.md#ing-bank)
+
 ## Basic
 
 1. [Control Structures](./1.basics.md#control-structures)
@@ -48,83 +52,40 @@
 
 ## Security
 
-11. Main building blocks for asynchronous programming in Java:
-  - Future
-  - CompletableFuture
-  - Fork Join Pool
-  - ExecutorService
-  - Executor
+1. [OAuth2](./5.security.md#oauth-20)
+2. [Certificates](./5.security.md#certificates)
+3. [Web Vulnerabilities](./5.security.md#web-vulnerabilities-owasp)
 
-## TODO
+## OPs
 
-#### .NET
+1. [Docker](6.ops.md#docker-docker-compose)
+2. [Azure DevOps](6.ops.md#azure-devops-ado)
+3. [Kubernetes](6.ops.md#kubernetes)
+4. [Ansible](6.ops.md#ansible)
+
+## .NET
 
 - [.NET ecosystem](../dotnet/dotnet_ecosystem.md#community)
 - [.NET tools](../dotnet/dotnet_ecosystem.md#tools)
 
-#### OPs
 
-- Docker (Docker-compose)
-  It is a platform for developing, shipping, and running applications. It consists of:
-     - Docker Engine
-     - Docker Compose
-     - Docker Hub
-     - Docker images
-     - Docker containers
-     - Docker networks
-     - Docker ports mapping
-     - Docker volumes
-     - Docker-compose file: version, services, networks, volumes
-     - Dockerfile (instructions: FROM, RUN, COPY, CMD, EXPOSE, ENV, WORKDIR, VOLUME, ENTRYPOINT)
-     A docker container running on a host machine shares the host's kernel, but it runs as a separate process in user space.
-     The files inside the docker container are stored in a read-write layer on top of the read-only image layer.
-     
-- Azure DevOps (ADO)
-  - Pipelines (CI/CD)
-    - pipeline elements (templates, stages, jobs, tasks, triggers, variables, parameters, conditions, branches - if, dependsOn)
+## Java
 
-- Kubernetes 
-  Its architecture consists:
-  - Master node
-  - Worker node
-  - Pod 
-    It is smallest deployable unit that can be created, scheduled, and managed, can contain one or more (docker) containers, shared network namespace, shared storage.
-    Probe: Liveness, Readiness are used by k8s to check the health of the container inside the pod.
-  - Service
-  - Deployment
-  - ReplicaSet
-  - Helm - is a package manager for Kubernetes
+### What's new
 
-- Ansible
-  Its elements/architecture (Inventory, Playbook, Role, Module, Task, Handler, Vault, Ansible Galaxy, Ansible Tower
+1. [java 1.7](./2.new_in_Java.md#java-1_7)
+2. [java 8](./2.new_in_Java.md#java-8-features)
+3. [java 9](./2.new_in_Java.md#java-9-features)
+4. [java 11](./2.new_in_Java.md#java-11-features)
+5. [java 17](./2.new_in_Java.md#java-17-features)
+6. [java 21](./2.new_in_Java.md#java-21-features)
 
-- OpenShift is offered by Red Hat as a Platform as a Service (PaaS) solution, k8s-based
+## Testing
 
-#### Security
+1. [Types of tests](./8.testing.md#types-of-test)
+2. [Test triangle](./8.testing.md#test-triangle)
+3. [Test containers](./8.testing.md#test-containers)
 
-- [OAuth2](./4.OAuth2.md#oauth-20)
+## What's new in C#
 
-- Certificates:
-  - Signature
-  - Algorithms: RSA, DSA, ECDSA, EdDSA
-  - openssl, keytool
-  - SSL/TLS - Secure Socket Layer/Transport Layer Security
-  - SSH - Secure Shell
-  - HTTPS - HTTP Secure
-  - PKI - Public Key Infrastructure
-  - CA - Certificate Authority
-  - Public/Private keys
-
-#### Web vulnerabilities (OWASP)
-
-Types:
-  - SQL Injection
-  - XSS - Cross Site Scripting
-  - CSRF - Cross Site Request Forgery
-  - DoS - Denial of Service
-  - DDoS - Distributed Denial of Service
-  - RCE - Remote Code Execution
-  - SSRF - Server Side Request Forgery
-  - Insecure Deserialization
-  - RegEx DoS
-
+1. [Features History](https://learn.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-version-history) 
