@@ -2,52 +2,51 @@
 
 ## Basic
 
-1. [Control Structures](./1.interview1.md#control-structures)
-2. [Data Structures](./1.interview1.md#data-structures)
-3. [OOP](./1.interview1.md#oop)
-4. [SOLID](./1.interview1.md#solid-principles)
-5. [Design Patterns](./1.interview1.md#design-patterns)
-6. [Functional Programming](./1.interview1.md#fp)
-
+1. [Control Structures](./1.basics.md#control-structures)
+2. [Data Structures](./1.basics.md#data-structures)
+3. [OOP](./1.basics.md#oop)
+4. [SOLID](./1.basics.md#solid-principles)
+5. [Design Patterns](./1.basics.md#design-patterns)
+6. [Functional Programming](./1.basics.md#fp)
 
 ## Distributed Apps
 
-1. [RESTful](./1.interview1.md#restful-services)
-2. [Reactive](./1.interview1.md#reactive-manifesto)
-3. [Resilience](./1.interview1.md#resilience-patterns)
-
+1. [RESTful](./9.distributed_computing.md#restful-services)
+2. [Reactive](./9.distributed_computing.md#reactive-manifesto)
+3. [Resilience](./9.distributed_computing.md#resilience-patterns)
 
 ## Storage
 
-1. [Database](./1.interview1.md#database)
-2. [NOSQL](./1.interview1.md#nosql)
-3. [Transaction isolation](./1.interview1.md#transaction-isolation)
-
+1. [Database](./10.storage.md#database)
+2. [Transaction isolation](./10.storage.md#transaction-isolation)
+3. [NOSQL](./10.storage.md#nosql)
 
 ## Architecture
 
-1. [Architecture](./1.interview1.md#architecture)
+1. [Architecture](./7.architecture.md#architecture)
 
 ## Performance
 
-1. [Garbage Collection](../expert/java_garbagecollectors.md#java-garbage-collectors)
-2. [Java Memory](../expert/java_garbagecollectors.md#jvm-memory-areas)
-3. [Java Heap Memory](../expert/java_garbagecollectors.md#heap-memory-areas-generations)
-4. [Memory Leaks](../expert/java_garbagecollectors.md#memory-leak)
+1. [Garbage Collection](./12.java_garbagecollectors.md#java-garbage-collectors)
+2. [Java Memory](./12.java_garbagecollectors.md#jvm-memory-areas)
+3. [Java Heap Memory](./12.java_garbagecollectors.md#heap-memory-areas-generations)
+4. [Memory Leaks](./12.java_garbagecollectors.md#memory-leak)
 
 ## Concurrency, parallelism, asynchrony
 
-1. [Concurrency Basics](../expert/concurrency_parallelism_asychrony.md#basics-concepts)
-2. [Concurrency Advanced](../expert/concurrency_parallelism_asychrony.md#advanced-concepts)
+1. [Concurrency Basics](./11.concurrency_parallelism_asychrony.md#basics-concepts)
+2. [Concurrency Advanced](./11.concurrency_parallelism_asychrony.md#advanced-concepts)
+3. [Thread scheduling](./11.concurrency_parallelism_asychrony.md#threads-vs-processes)
+4. [Java building blocks](./11.concurrency_parallelism_asychrony.md#main-building-blocks-for-asynchronous-programming-in-java)
+5. [KotlinContinuous Passing Style](./11.concurrency_parallelism_asychrony.md#continuous-passing-style-cps-in-kotlin)
+6. [Kotlin Structured Concurrency](./11.concurrency_parallelism_asychrony.md#structure-concurrency)
+7. [Other Kotlin Coroutines Features](./11.concurrency_parallelism_asychrony.md#other-kotlin-coroutines-features)
+8. [Interprocess comunication](./11.concurrency_parallelism_asychrony.md#inter-process-communication-techniques)
+9. [Thread scheduling](./11.concurrency_parallelism_asychrony.md#threads-scheduling)
+10. [Concurrent Collection](./11.concurrency_parallelism_asychrony.md#concurrent-collections)
+11. [Actor Model - Aka](./11.concurrency_parallelism_asychrony.md#actor-model-in-akka)
 
-3. [Thread scheduling](../expert/concurrency_parallelism_asychrony.md#threads-vs-processes)
-4. [KotlinContinuous Passing Style](../expert/concurrency_parallelism_asychrony.md#continuous-passing-style-cps-in-kotlin)
-5. [Kotlin Structured Concurrency](../expert/concurrency_parallelism_asychrony.md#structure-concurrency)
-6. [Other Kotlin Coroutines Features](../expert/concurrency_parallelism_asychrony.md#other-kotlin-coroutines-features)
-7. [Interprocess comunication](../expert/concurrency_parallelism_asychrony.md#inter-process-communication-techniques)
-8. [Thread scheduling](../expert/concurrency_parallelism_asychrony.md#threads-scheduling)
-9. [Concurrent Collection](../expert/concurrency_parallelism_asychrony.md#concurrent-collections)
-10. [Actor Model - Aka](../expert/concurrency_parallelism_asychrony.md#actor-model-in-akka)
+## Security
 
 11. Main building blocks for asynchronous programming in Java:
   - Future
