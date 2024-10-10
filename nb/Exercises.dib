@@ -1,0 +1,45 @@
+#!meta
+
+{"kernelInfo":{"defaultKernelName":"csharp","items":[{"aliases":[],"name":"csharp"},{"aliases":[],"languageName":"fsharp","name":"fsharp"}]}}
+
+#!markdown
+
+# Language: F#
+## Install and open FSharp Data library
+
+#!fsharp
+
+#r "nuget:FSharp.Data,3.3.3"
+open FSharp.Data
+
+#!markdown
+
+## prepare json data
+
+#!fsharp
+
+[<Literal>]
+let SampleJson = """
+  {
+    "Brand": "Fender",
+    "Model": "Stratocaster",
+    "Year": 1954
+  }
+  """
+
+#!markdown
+
+## Create type provider for JSON data
+
+#!markdown
+
+## Get sample data from sampleJson
+
+#!fsharp
+
+type Guitar = JsonProvider<SampleJson>
+
+let sample = Guitar.GetSample()
+let description = $"{sample.Brand} - {sample.Model} - {sample.Year}"
+
+description
