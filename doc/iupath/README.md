@@ -2,7 +2,7 @@
 
 ## My resume
 
-- [My resume](0.my_resume_explained.md#ing-bank)
+- [My resume](0.my_resume_explained.md)
 
 ## Basic
 
