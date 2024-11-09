@@ -57,3 +57,8 @@
    - Good understanding of distributed systems
    - Engineering expertise in developing and owning Kubernetes applications
    - Monitoring and observability
+
+
+## References
+
+- [FP In C#](https://youtu.be/CLKZ7ZgVido?t=2106)
